@@ -1,0 +1,13 @@
+@startuml
+
+left to right direction
+
+actor Recepcionist
+
+Recepcionist --> (Query data)
+Recepcionist --> (Reserve camp site)
+Recepcionist --> (Free camp site)
+Recepcionist --> (Generate invoice)
+Recepcionist --> (Visualize the camp sites)
+
+@enduml
