@@ -17,7 +17,7 @@ Projekt munkások és felelősségek:
 
 ## Üzleti folyamatok modellje
 
-![alt text](https://github.com/NagyAkos/AFP_2020_B/tree/master/docs/usecase.png)
+![alt text](https://github.com/NagyAkos/AFP_2020_B/blob/master/docs/usecase.PNG)
 
 ## Követelmények
 
