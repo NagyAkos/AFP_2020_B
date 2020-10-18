@@ -17,7 +17,7 @@ Projekt munkások és felelősségek:
 
 ## Üzleti folyamatok modellje
 
-![alt text](https://github.com/NagyAkos/AFP_2020_B/blob/%232_system_requirement_specification/docs/usecase.PNG)
+![alt text](https://github.com/NagyAkos/AFP_2020_B/blob/master/docs/usecase.PNG)
 
 ## Követelmények
 
@@ -43,7 +43,7 @@ A recepciós le tudja kérni hogy melyik nap melyik hely elérhető és milyen i
 | F5 | Számlagenerálás  | A szálláson eltöltött idő alapján a számla legenerálása.                                                 |
 
 
-##Adatstruktúra
+## Adatstruktúra
 | Id | Leírás                                                                                   |
 |----|------------------------------------------------------------------------------------------|
 | F1 | UUID:   ID, String: GuestName,String: PaymentMethod, int: CampingID, Date:   ReserveDate |
