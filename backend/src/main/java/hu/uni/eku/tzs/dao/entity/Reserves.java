@@ -11,13 +11,12 @@ import javax.persistence.*;
 @NoArgsConstructor
 @Getter
 @Setter
-public class ComplexNumber {
 
+public class Reserves {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private int id;
+    private String guestName;
     @Column
-    private double realPart;
+    private boolean campingStyle;
     @Column
-    private double imaginaryPart;
+    private boolean electricity;
 }

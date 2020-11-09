@@ -5,12 +5,15 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import javax.persistence.Column;
+
 @Data
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class ComplexNumberRecordRequestDto {
 
-    private double real;
-    private double imag;
+public class ReservesRecordRequestDto {
+    private String guestName;
+    private boolean campingStyle;
+    private boolean electricity;
 }

@@ -45,7 +45,7 @@ public class GuestsController {
 
     @GetMapping(value = {"/"}, produces = MediaType.APPLICATION_JSON_VALUE)
     @ResponseBody
-    @ApiOperation(value= "Query Complex Numbers")
+    @ApiOperation(value= "Query Guests")
     public Collection<GuestsDto> query(){
         return service.readAll().stream().map(model ->
                 GuestsDto.builder()
