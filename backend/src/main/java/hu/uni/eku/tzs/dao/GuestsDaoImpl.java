@@ -32,7 +32,7 @@ public class GuestsDaoImpl implements GuestsDao {
     }
 
     @Override
-    public void delete(Guests complexNumber) {
+    public void delete(Guests guests) {
 
     }
 
