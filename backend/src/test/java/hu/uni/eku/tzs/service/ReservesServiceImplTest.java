@@ -28,14 +28,14 @@ public class ReservesServiceImplTest {
 
     @Test
     void record() throws ReservesAlreadyExistsException {
-        Reserves reserves = new Reserves("Asd",true,true);
+        Reserves reserves = new Reserves(1,"Asd",true,true);
         service.record(reserves);
         verify(dao).create(any());
     }
 
     @Test
     void recordExistingGuests() {
-        Reserves reserves = new Reserves("tesztelek",true,false);
+        Reserves reserves = new Reserves(2,"tesztelek",true,false);
         when(dao.readAll()).thenReturn(List.of(reserves));
         assertThrows(ReservesAlreadyExistsException.class, () -> service.record(reserves));
         verify(dao, never()).create(any());
@@ -44,8 +44,8 @@ public class ReservesServiceImplTest {
     @Test
     void readAll() {
         Collection<Reserves> daoResponse = List.of(
-                new Reserves("tesztelek",true,true),
-                new Reserves("Dezső",true,true)
+                new Reserves(3,"tesztelek",true,true),
+                new Reserves(4,"Dezső",true,true)
         );
         when(dao.readAll()).thenReturn(daoResponse);
 

@@ -13,6 +13,7 @@ import javax.persistence.Column;
 @AllArgsConstructor
 
 public class ReservesRecordRequestDto {
+    private int id;
     private String guestName;
     private boolean campingStyle;
     private boolean electricity;

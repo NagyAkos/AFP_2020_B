@@ -14,6 +14,9 @@ import javax.persistence.*;
 
 public class Reserves {
     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private int id;
+    @Column
     private String guestName;
     @Column
     private boolean campingStyle;

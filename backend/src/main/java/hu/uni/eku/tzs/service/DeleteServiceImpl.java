@@ -25,7 +25,6 @@ public class DeleteServiceImpl implements DeleteService{
         if(isAlreadyRecorded){
             log.info("Complex Number {} is already recorded!", delete);
             throw new DeleteAlreadyExistsException(String.format("Reserve to delete (%s) already exists!", delete.toString()));
-
         }
         dao.create(delete);
     }
