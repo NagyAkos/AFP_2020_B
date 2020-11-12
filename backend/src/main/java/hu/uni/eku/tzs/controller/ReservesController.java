@@ -31,11 +31,11 @@ public class ReservesController {
             @RequestBody
                     ReservesRecordRequestDto request
     ){
-        log.info("Reserve informations: ({},{},{},{})",request.getId(),request.getGuestName(),request.isCampingStyle(),request.isElectricity());
+        log.info("Reserve informations: ({},{},{},{})",request.getId(),request.getGuestId(),request.isCampingStyle(),request.isElectricity());
         try {
-            service.record(new Reserves(request.getId(),request.getGuestName(),request.isCampingStyle(),request.isElectricity()));
+            service.record(new Reserves(request.getId(),request.getGuestId(),request.isCampingStyle(),request.isElectricity()));
         } catch (Exception e) {
-            log.info("Reserve is already exists! Message: {},{},{},{}", request.getGuestName(),request.isCampingStyle(),request.isElectricity(), e.getMessage());
+            log.info("Reserve is already exists! Message: {},{},{},{}", request.getGuestId(),request.isCampingStyle(),request.isElectricity(), e.getMessage());
             throw new ResponseStatusException(
                     HttpStatus.CONFLICT,
                     e.getMessage()
@@ -50,7 +50,7 @@ public class ReservesController {
         return service.readAll().stream().map(model ->
                 ReservesDto.builder()
                         .id(model.getId())
-                        .guestName(model.getGuestName())
+                        .guestId(model.getGuestId())
                         .campingStyle(model.isCampingStyle())
                         .electricity(model.isElectricity())
                         .build()

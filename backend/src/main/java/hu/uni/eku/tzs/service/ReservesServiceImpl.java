@@ -22,7 +22,7 @@ public class ReservesServiceImpl implements ReservesService{
                 .anyMatch( r ->
                                 r.getId() == reserves.getId()
                                 &&
-                                r.getGuestName() == reserves.getGuestName()
+                                r.getGuestId() == reserves.getGuestId()
                                 &&
                                 r.isCampingStyle() == reserves.isCampingStyle()
                                 &&

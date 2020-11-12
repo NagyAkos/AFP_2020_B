@@ -17,7 +17,7 @@ public class Reserves {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
     @Column
-    private String guestName;
+    private int guestId;
     @Column
     private boolean campingStyle;
     @Column

@@ -14,7 +14,7 @@ import javax.persistence.Column;
 
 public class ReservesRecordRequestDto {
     private int id;
-    private String guestName;
+    private int guestId;
     private boolean campingStyle;
     private boolean electricity;
 }

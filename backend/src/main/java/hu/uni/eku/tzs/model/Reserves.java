@@ -10,7 +10,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class Reserves {
     private int id;
-    private String guestName;
+    private int guestId;
     private boolean campingStyle;
     private boolean electricity;
 }

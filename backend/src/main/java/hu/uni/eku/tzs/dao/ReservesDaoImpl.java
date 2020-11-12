@@ -40,7 +40,7 @@ public class ReservesDaoImpl implements ReservesDao{
         private static Reserves entity2model(hu.uni.eku.tzs.dao.entity.Reserves entity){
             return new Reserves(
                     entity.getId(),
-                    entity.getGuestName(),
+                    entity.getGuestId(),
                     entity.isCampingStyle(),
                     entity.isElectricity()
             );
@@ -49,7 +49,7 @@ public class ReservesDaoImpl implements ReservesDao{
         private static hu.uni.eku.tzs.dao.entity.Reserves model2entity(Reserves model){
             return hu.uni.eku.tzs.dao.entity.Reserves.builder()
                     .id(model.getId())
-                    .guestName(model.getGuestName())
+                    .guestId(model.getGuestId())
                     .campingStyle(model.isCampingStyle())
                     .electricity(model.isElectricity())
                     .build();
