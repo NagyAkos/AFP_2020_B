@@ -31,9 +31,9 @@ public class ReservesController {
             @RequestBody
                     ReservesRecordRequestDto request
     ){
-        log.info("Reserve informations: ({},{},{})",request.getGuestName(),request.isCampingStyle(),request.isElectricity());
+        log.info("Reserve informations: ({},{},{},{})",request.getId(),request.getGuestName(),request.isCampingStyle(),request.isElectricity());
         try {
-            service.record(new Reserves(request.getGuestName(),request.isCampingStyle(),request.isElectricity()));
+            service.record(new Reserves(request.getId(),request.getGuestName(),request.isCampingStyle(),request.isElectricity()));
         } catch (Exception e) {
             log.info("Reserve is already exists! Message: {},{},{},{}", request.getGuestName(),request.isCampingStyle(),request.isElectricity(), e.getMessage());
             throw new ResponseStatusException(
@@ -49,6 +49,7 @@ public class ReservesController {
     public Collection<ReservesDto> query(){
         return service.readAll().stream().map(model ->
                 ReservesDto.builder()
+                        .id(model.getId())
                         .guestName(model.getGuestName())
                         .campingStyle(model.isCampingStyle())
                         .electricity(model.isElectricity())

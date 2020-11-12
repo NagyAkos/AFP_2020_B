@@ -5,6 +5,7 @@ import lombok.Data;
 @Data
 @Builder
 public class ReservesDto {
+    private int id;
     private String guestName;
     private boolean campingStyle;
     private boolean electricity;

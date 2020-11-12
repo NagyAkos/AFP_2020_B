@@ -20,6 +20,8 @@ public class ReservesServiceImpl implements ReservesService{
         final boolean isAlreadyRecorded = dao.readAll()
                 .stream()
                 .anyMatch( r ->
+                                r.getId() == reserves.getId()
+                                &&
                                 r.getGuestName() == reserves.getGuestName()
                                 &&
                                 r.isCampingStyle() == reserves.isCampingStyle()
