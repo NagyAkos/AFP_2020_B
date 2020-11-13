@@ -10,5 +10,7 @@ public interface CampsService {
     void record(Camps camps) throws CampsAlreadyExistsException;
 
     Collection<Camps> readAll();
+
+    void delete(int id);
 }
 

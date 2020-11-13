@@ -55,5 +55,10 @@ public class CampsController {
         ).collect(Collectors.toList());
     }
 
+    @ApiOperation(value= "Delete camp")
+    @DeleteMapping("/{id}")
+    void deleteCamp(@PathVariable int id){
+        service.delete(id);
+    }
 
 }

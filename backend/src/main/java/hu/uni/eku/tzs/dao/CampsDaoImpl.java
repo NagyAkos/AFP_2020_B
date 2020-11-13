@@ -32,8 +32,8 @@ public class CampsDaoImpl implements CampsDao{
     }
 
     @Override
-    public void delete(Camps camps) {
-
+    public void delete(int id) {
+        repository.deleteById(id);
     }
 
     private static class CampsEntityModelConverter {

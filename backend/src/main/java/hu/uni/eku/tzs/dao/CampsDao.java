@@ -12,5 +12,5 @@ public interface CampsDao {
 
     void update(Camps original, Camps updated);
 
-    void delete(Camps camps);
+    void delete(int id);
 }

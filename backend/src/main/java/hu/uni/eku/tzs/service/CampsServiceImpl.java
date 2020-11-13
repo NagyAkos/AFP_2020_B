@@ -35,5 +35,10 @@ public class CampsServiceImpl implements CampsService{
         return dao.readAll();
     }
 
+    @Override
+    public void delete(int id) {
+        dao.delete(id);
+    }
+
 
 }
