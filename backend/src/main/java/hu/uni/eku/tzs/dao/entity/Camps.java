@@ -1,6 +1,7 @@
 package hu.uni.eku.tzs.dao.entity;
 
 import lombok.*;
+import org.hibernate.annotations.Generated;
 
 import javax.persistence.*;
 
@@ -10,7 +11,8 @@ import javax.persistence.*;
 @NoArgsConstructor
 @Getter
 @Setter
-public class Delete {
+public class Camps {
+
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;

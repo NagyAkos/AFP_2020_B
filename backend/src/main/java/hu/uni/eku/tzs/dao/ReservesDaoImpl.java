@@ -31,8 +31,8 @@ public class ReservesDaoImpl implements ReservesDao{
     }
 
     @Override
-    public void delete(Reserves reserves) {
-
+    public void delete(int id) {
+        repository.deleteById(id);
     }
 
     private static class ReservesEntityModelConverter {
@@ -40,18 +40,24 @@ public class ReservesDaoImpl implements ReservesDao{
         private static Reserves entity2model(hu.uni.eku.tzs.dao.entity.Reserves entity){
             return new Reserves(
                     entity.getId(),
-                    entity.getGuestName(),
+                    entity.getGuestId(),
                     entity.isCampingStyle(),
-                    entity.isElectricity()
+                    entity.isElectricity(),
+                    entity.getPrice(),
+                    entity.getReserveStart(),
+                    entity.getReserveEnd()
             );
         }
 
         private static hu.uni.eku.tzs.dao.entity.Reserves model2entity(Reserves model){
             return hu.uni.eku.tzs.dao.entity.Reserves.builder()
                     .id(model.getId())
-                    .guestName(model.getGuestName())
+                    .guestId(model.getGuestId())
                     .campingStyle(model.isCampingStyle())
                     .electricity(model.isElectricity())
+                    .price(model.getPrice())
+                    .reserveStart(model.getReserveStart())
+                    .reserveEnd(model.getReserveEnd())
                     .build();
         }
 

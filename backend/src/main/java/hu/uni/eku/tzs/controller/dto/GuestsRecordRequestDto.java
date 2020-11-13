@@ -16,7 +16,6 @@ public class GuestsRecordRequestDto {
 
     private int id;
     private String guestName;
-    private String paymentMethod;
-    private int campingId;
-    private LocalDate reserveDate;
+    private String email;
+    private int phone;
 }

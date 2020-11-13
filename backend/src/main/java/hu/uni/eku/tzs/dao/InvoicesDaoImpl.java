@@ -32,8 +32,8 @@ public class InvoicesDaoImpl implements InvoicesDao{
     }
 
     @Override
-    public void delete(Invoices invoices) {
-
+    public void delete(int id) {
+        repository.deleteById(id);
     }
 
     private static class InvoicesEntityModelConverter {
@@ -41,14 +41,18 @@ public class InvoicesDaoImpl implements InvoicesDao{
         private static Invoices entity2model(hu.uni.eku.tzs.dao.entity.Invoices entity){
             return new Invoices(
                     entity.getId(),
-                    entity.getBalance()
+                    entity.getQuestId(),
+                    entity.getPaymentMehtod(),
+                    entity.getReserveId()
             );
         }
 
         private static hu.uni.eku.tzs.dao.entity.Invoices model2entity(Invoices model){
             return hu.uni.eku.tzs.dao.entity.Invoices.builder()
                     .id(model.getId())
-                    .balance(model.getBalance())
+                    .questId(model.getQuestId())
+                    .reserveId(model.getReserveId())
+                    .paymentMehtod(model.getPaymentMethod())
                     .build();
         }
 

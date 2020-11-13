@@ -7,6 +7,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
 
+import java.time.LocalDate;
 import java.util.Collection;
 import java.util.List;
 
@@ -28,14 +29,14 @@ public class ReservesServiceImplTest {
 
     @Test
     void record() throws ReservesAlreadyExistsException {
-        Reserves reserves = new Reserves(1,"Asd",true,true);
+        Reserves reserves = new Reserves(1,1,true,true,1111111, LocalDate.of(2020,01,01),LocalDate.of(2020,01,01));
         service.record(reserves);
         verify(dao).create(any());
     }
 
     @Test
     void recordExistingGuests() {
-        Reserves reserves = new Reserves(2,"tesztelek",true,false);
+        Reserves reserves = new Reserves(1,1,true,true,1111111, LocalDate.of(2020,01,01),LocalDate.of(2020,01,01));
         when(dao.readAll()).thenReturn(List.of(reserves));
         assertThrows(ReservesAlreadyExistsException.class, () -> service.record(reserves));
         verify(dao, never()).create(any());
@@ -44,8 +45,8 @@ public class ReservesServiceImplTest {
     @Test
     void readAll() {
         Collection<Reserves> daoResponse = List.of(
-                new Reserves(3,"tesztelek",true,true),
-                new Reserves(4,"Dezső",true,true)
+                new Reserves(1,1,true,true,1111111, LocalDate.of(2020,01,01),LocalDate.of(2020,01,01)),
+                new Reserves(2,1,true,true,1111111, LocalDate.of(2020,01,01),LocalDate.of(2020,01,01))
         );
         when(dao.readAll()).thenReturn(daoResponse);
 

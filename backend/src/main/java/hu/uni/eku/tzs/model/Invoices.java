@@ -9,5 +9,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class Invoices {
     private int id;
-    private long balance;
+    private int questId;
+    private String paymentMethod;
+    private int reserveId;
 }

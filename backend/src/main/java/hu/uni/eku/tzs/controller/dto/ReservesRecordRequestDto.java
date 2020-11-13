@@ -6,6 +6,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.Column;
+import java.time.LocalDate;
 
 @Data
 @Builder
@@ -14,7 +15,10 @@ import javax.persistence.Column;
 
 public class ReservesRecordRequestDto {
     private int id;
-    private String guestName;
+    private int guestId;
     private boolean campingStyle;
     private boolean electricity;
+    private int price;
+    private LocalDate reserveStart;
+    private LocalDate reserveEnd;
 }

@@ -29,14 +29,14 @@ public class InvoicesServiceImplTest {
 
     @Test
     void record() throws InvoicesAlreadyExistsException {
-        Invoices invoices = new Invoices(1,20000);
+        Invoices invoices = new Invoices(1,2,"KP",1);
         service.record(invoices);
         verify(dao).create(any());
     }
 
     @Test
     void recordExistingInvoices() {
-        Invoices invoices = new Invoices(2,100000);
+        Invoices invoices = new Invoices(1,2,"KP",1);
         when(dao.readAll()).thenReturn(List.of(invoices));
         assertThrows(InvoicesAlreadyExistsException.class, () -> service.record(invoices));
         verify(dao, never()).create(any());
@@ -45,8 +45,8 @@ public class InvoicesServiceImplTest {
     @Test
     void readAll() {
         Collection<Invoices> daoResponse = List.of(
-                new Invoices(3,35000),
-                new Invoices(4,55555)
+                new Invoices(1,2,"KP",1),
+                new Invoices(2,2,"KP",1)
 
         );
         when(dao.readAll()).thenReturn(daoResponse);

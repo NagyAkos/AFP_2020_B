@@ -20,9 +20,7 @@ public class Guests {
     @Column
     private String guestName;
     @Column
-    private String paymentMethod;
+    private String email;
     @Column
-    private int campingId;
-    @Column
-    private LocalDate reserveDate;
+    private int phone;
 }

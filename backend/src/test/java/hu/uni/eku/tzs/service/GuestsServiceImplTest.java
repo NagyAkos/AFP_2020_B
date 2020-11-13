@@ -29,14 +29,14 @@ class GuestsServiceImplTest {
 
     @Test
     void record() throws GuestsAlreadyExistsException {
-        Guests guests = new Guests(1,"Géza","Credit card",4, LocalDate.of(2020, 1, 8));
+        Guests guests = new Guests(1,"Jóska","asd@as.com",06201231231);
         service.record(guests);
         verify(dao).create(any());
     }
 
     @Test
     void recordExistingGuests() {
-        Guests guests = new Guests(2,"Aladár","kp",2, LocalDate.of(2020, 1, 9));
+        Guests guests = new Guests(1,"Jóska","asd@as.com",06201231231);
         when(dao.readAll()).thenReturn(List.of(guests));
         assertThrows(GuestsAlreadyExistsException.class, () -> service.record(guests));
         verify(dao, never()).create(any());
@@ -45,8 +45,8 @@ class GuestsServiceImplTest {
     @Test
     void readAll() {
         Collection<Guests> daoResponse = List.of(
-                new Guests(3,"Aladár","kp",2, LocalDate.of(2020, 1, 10)),
-                new Guests(4,"Aladár","kp",2, LocalDate.of(2020, 1, 11))
+                new Guests(1,"Jóska","asd@as.com",06201231231),
+                new Guests(2,"Jóska","asd@as.com",06201231231)
 
         );
         when(dao.readAll()).thenReturn(daoResponse);

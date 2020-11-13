@@ -23,8 +23,11 @@ public class InvoicesServiceImpl implements InvoicesService{
                 .stream()
                 .anyMatch( i ->
                         i.getId() == invoices.getId()
-                                &&
-                                i.getBalance() == invoices.getBalance());
+
+                &&i.getQuestId() == invoices.getQuestId()
+                && i.getReserveId()==invoices.getReserveId()
+                &&
+                i.getPaymentMethod() == invoices.getPaymentMethod());
         if(isAlreadyRecorded){
             log.info("Invoice {} is already recorded!", invoices);
             throw new InvoicesAlreadyExistsException(String.format("Invoice (%s) already exists!", invoices.toString()));
@@ -37,4 +40,10 @@ public class InvoicesServiceImpl implements InvoicesService{
     public Collection<Invoices> readAll() {
         return dao.readAll();
     }
+
+    @Override
+    public void delete(int id) {
+        dao.delete(id);
+    }
+
 }

@@ -11,8 +11,6 @@ import javax.persistence.Column;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class DeleteRecordRequestDto {
-
+public class CampsRecordRequestDto {
     private int id;
 }
-

@@ -22,11 +22,17 @@ public class ReservesServiceImpl implements ReservesService{
                 .anyMatch( r ->
                                 r.getId() == reserves.getId()
                                 &&
-                                r.getGuestName() == reserves.getGuestName()
+                                r.getGuestId() == reserves.getGuestId()
                                 &&
                                 r.isCampingStyle() == reserves.isCampingStyle()
                                 &&
-                                r.isElectricity() == reserves.isElectricity());
+                                r.isElectricity() == reserves.isElectricity()
+                                &&
+                                r.getPrice()==reserves.getPrice()
+                                &&
+                                r.getReserveStart()==reserves.getReserveStart()
+                                &&
+                                r.getReserveEnd()==reserves.getReserveEnd());
         if(isAlreadyRecorded){
             log.info("Reserve {} is already recorded!", reserves);
             throw new ReservesAlreadyExistsException(String.format("Reserve (%s) already exists!", reserves.toString()));
@@ -40,7 +46,10 @@ public class ReservesServiceImpl implements ReservesService{
         return dao.readAll();
     }
 
-
+    @Override
+    public void delete(int id) {
+    dao.delete(id);
+    }
 
 
 }

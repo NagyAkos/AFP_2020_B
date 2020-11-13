@@ -4,13 +4,18 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.time.LocalDate;
+
 
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 public class Reserves {
     private int id;
-    private String guestName;
+    private int guestId;
     private boolean campingStyle;
     private boolean electricity;
+    private int price;
+    private LocalDate reserveStart;
+    private LocalDate reserveEnd;
 }

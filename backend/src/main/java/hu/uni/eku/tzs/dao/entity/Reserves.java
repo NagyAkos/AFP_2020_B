@@ -4,6 +4,7 @@ import lombok.*;
 import org.hibernate.annotations.Generated;
 
 import javax.persistence.*;
+import java.time.LocalDate;
 
 @Entity
 @Builder
@@ -17,9 +18,15 @@ public class Reserves {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
     @Column
-    private String guestName;
+    private int guestId;
     @Column
     private boolean campingStyle;
     @Column
     private boolean electricity;
+    @Column
+    private int price;
+    @Column
+    private LocalDate reserveStart;
+    @Column
+    private LocalDate reserveEnd;
 }
