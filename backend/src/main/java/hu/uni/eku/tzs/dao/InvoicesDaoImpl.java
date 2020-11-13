@@ -32,8 +32,8 @@ public class InvoicesDaoImpl implements InvoicesDao{
     }
 
     @Override
-    public void delete(Invoices invoices) {
-
+    public void delete(int id) {
+        repository.deleteById(id);
     }
 
     private static class InvoicesEntityModelConverter {

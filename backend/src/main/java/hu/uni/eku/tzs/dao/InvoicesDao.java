@@ -12,5 +12,5 @@ public interface InvoicesDao {
 
     void update(Invoices original, Invoices updated);
 
-    void delete(Invoices invoices);
+    void delete(int id);
 }
