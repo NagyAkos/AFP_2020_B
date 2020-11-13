@@ -11,4 +11,5 @@ public interface ReservesService {
 
     Collection<Reserves> readAll();
 
+    void delete(int id);
 }

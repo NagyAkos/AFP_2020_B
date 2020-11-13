@@ -31,8 +31,8 @@ public class ReservesDaoImpl implements ReservesDao{
     }
 
     @Override
-    public void delete(Reserves reserves) {
-
+    public void delete(int id) {
+        repository.deleteById(id);
     }
 
     private static class ReservesEntityModelConverter {

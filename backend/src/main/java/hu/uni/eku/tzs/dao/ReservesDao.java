@@ -10,5 +10,5 @@ public interface ReservesDao {
 
     void update(Reserves original, Reserves updated);
 
-    void delete(Reserves reserves);
+    void delete(int id);
 }

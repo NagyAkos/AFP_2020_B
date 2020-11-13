@@ -40,7 +40,10 @@ public class ReservesServiceImpl implements ReservesService{
         return dao.readAll();
     }
 
-
+    @Override
+    public void delete(int id) {
+    dao.delete(id);
+    }
 
 
 }

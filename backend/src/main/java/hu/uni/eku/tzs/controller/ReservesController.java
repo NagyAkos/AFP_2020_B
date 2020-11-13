@@ -56,4 +56,9 @@ public class ReservesController {
                         .build()
         ).collect(Collectors.toList());
     }
+    @ApiOperation(value= "Delete reserve")
+    @DeleteMapping("/{id}")
+    void deleteReserve(@PathVariable int id){
+        service.delete(id);
+    }
 }
