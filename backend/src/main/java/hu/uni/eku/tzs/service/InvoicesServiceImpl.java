@@ -40,4 +40,10 @@ public class InvoicesServiceImpl implements InvoicesService{
     public Collection<Invoices> readAll() {
         return dao.readAll();
     }
+
+    @Override
+    public void delete(int id) {
+        dao.delete(id);
+    }
+
 }

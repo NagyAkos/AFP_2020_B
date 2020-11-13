@@ -57,6 +57,12 @@ public class InvoicesController {
         ).collect(Collectors.toList());
     }
 
+    @ApiOperation(value= "Delete invoice")
+    @DeleteMapping("/{id}")
+    void deleteInvoice(@PathVariable int id){
+        service.delete(id);
+    }
+
 
 
 }

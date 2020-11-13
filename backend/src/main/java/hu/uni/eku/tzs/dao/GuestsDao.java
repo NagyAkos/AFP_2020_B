@@ -12,5 +12,5 @@ public interface GuestsDao {
 
     void update(Guests original, Guests updated);
 
-    void delete(Guests guests);
+    void delete(int id);
 }

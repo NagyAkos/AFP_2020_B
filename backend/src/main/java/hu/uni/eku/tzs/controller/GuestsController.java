@@ -57,4 +57,10 @@ public class GuestsController {
         ).collect(Collectors.toList());
     }
 
+    @ApiOperation(value= "Delete guest")
+    @DeleteMapping("/{id}")
+    void deleteGuest(@PathVariable int id){
+        service.delete(id);
+    }
+
 }

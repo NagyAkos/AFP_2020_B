@@ -32,8 +32,8 @@ public class GuestsDaoImpl implements GuestsDao {
     }
 
     @Override
-    public void delete(Guests guests) {
-
+    public void delete(int id) {
+        repository.deleteById(id);
     }
 
     private static class GuestsEntityModelConverter {

@@ -40,4 +40,9 @@ public class GuestsServiceImpl implements GuestsService {
     public Collection<Guests> readAll() {
         return dao.readAll();
     }
+
+    @Override
+    public void delete(int id) {
+        dao.delete(id);
+    }
 }

@@ -10,5 +10,7 @@ public interface InvoicesService {
     void record(Invoices invoices) throws InvoicesAlreadyExistsException;
 
     Collection<Invoices> readAll();
+
+    void delete(int id);
 }
 

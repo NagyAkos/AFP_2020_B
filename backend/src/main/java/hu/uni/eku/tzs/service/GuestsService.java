@@ -10,4 +10,6 @@ public interface GuestsService {
     void record(Guests guests) throws GuestsAlreadyExistsException;
 
     Collection<Guests> readAll();
+
+    void delete(int id);
 }
