@@ -14,5 +14,7 @@ import javax.persistence.Column;
 public class InvoicesRecordRequestDto {
 
     private int id;
-    private long balance;
+    private int questId;
+    private String paymentMethod;
+    private int reserveId;
 }

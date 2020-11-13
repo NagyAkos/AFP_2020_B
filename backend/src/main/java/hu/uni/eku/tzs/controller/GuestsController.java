@@ -31,9 +31,9 @@ public class GuestsController {
             @RequestBody
                     GuestsRecordRequestDto request
     ){
-        log.info("Guest informations: ({},{},{},{},{})",request.getId(),request.getGuestName(),request.getPaymentMethod(),request.getCampingId(),request.getReserveDate());
+        log.info("Guest informations: ({},{},{},{},{})",request.getId(),request.getGuestName(),request.getEmail(),request.getPhone());
         try {
-            service.record(new Guests(request.getId(),request.getGuestName(),request.getPaymentMethod(),request.getCampingId(),request.getReserveDate()));
+            service.record(new Guests(request.getId(),request.getGuestName(),request.getEmail(),request.getPhone()));
         } catch (Exception e) {
             log.info(" Guest ({},{}) is already exists! Message: {}", request.getId(),request.getGuestName(), e.getMessage());
             throw new ResponseStatusException(
@@ -51,9 +51,8 @@ public class GuestsController {
                 GuestsDto.builder()
                 .id(model.getId())
                 .guestName(model.getGuestName())
-                        .paymentMethod(model.getPaymentMethod())
-                        .campingId(model.getCampingId())
-                        .reserveDate(model.getReserveDate())
+                        .email(model.getEmail())
+                        .phone((model.getPhone()))
                 .build()
         ).collect(Collectors.toList());
     }

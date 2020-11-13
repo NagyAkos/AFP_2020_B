@@ -42,9 +42,8 @@ public class GuestsDaoImpl implements GuestsDao {
             return new Guests(
                     entity.getId(),
                     entity.getGuestName(),
-                    entity.getPaymentMethod(),
-                    entity.getCampingId(),
-                    entity.getReserveDate()
+                    entity.getEmail(),
+                    entity.getPhone()
             );
         }
 
@@ -52,9 +51,8 @@ public class GuestsDaoImpl implements GuestsDao {
             return hu.uni.eku.tzs.dao.entity.Guests.builder()
                     .id(model.getId())
                     .guestName(model.getGuestName())
-                    .paymentMethod(model.getPaymentMethod())
-                    .campingId(model.getCampingId())
-                    .reserveDate(model.getReserveDate())
+                    .email(model.getEmail())
+                    .phone(model.getPhone())
                     .build();
         }
 

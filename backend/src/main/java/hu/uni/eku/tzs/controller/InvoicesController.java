@@ -31,11 +31,11 @@ public class InvoicesController {
             @RequestBody
                     InvoicesRecordRequestDto request
     ){
-        log.info("Invoices informations: ({},{})",request.getId(),request.getBalance());
+        log.info("Invoices informations: ({},{})",request.getId(),request.getQuestId(),request.getReserveId(),request.getPaymentMethod());
         try {
-            service.record(new Invoices(request.getId(),request.getBalance()));
+            service.record(new Invoices(request.getId(),request.getQuestId(),request.getPaymentMethod(),request.getReserveId()));
         } catch (Exception e) {
-            log.info(" Invoice ({},{}) is already exists! Message: {}", request.getId(),request.getBalance(), e.getMessage());
+            log.info(" Invoice ({},{}) is already exists! Message: {}", request.getId(),request.getQuestId(), e.getMessage());
             throw new ResponseStatusException(
                     HttpStatus.CONFLICT,
                     e.getMessage()
@@ -50,7 +50,9 @@ public class InvoicesController {
         return service.readAll().stream().map(model ->
                 InvoicesDto.builder()
                         .id(model.getId())
-                        .balance(model.getBalance())
+                        .questId(model.getQuestId())
+                        .paymentMethod(model.getPaymentMethod())
+                        .reserveId(model.getReserveId())
                         .build()
         ).collect(Collectors.toList());
     }

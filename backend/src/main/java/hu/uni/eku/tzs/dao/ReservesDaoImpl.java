@@ -42,7 +42,10 @@ public class ReservesDaoImpl implements ReservesDao{
                     entity.getId(),
                     entity.getGuestId(),
                     entity.isCampingStyle(),
-                    entity.isElectricity()
+                    entity.isElectricity(),
+                    entity.getPrice(),
+                    entity.getReserveStart(),
+                    entity.getReserveEnd()
             );
         }
 
@@ -52,6 +55,9 @@ public class ReservesDaoImpl implements ReservesDao{
                     .guestId(model.getGuestId())
                     .campingStyle(model.isCampingStyle())
                     .electricity(model.isElectricity())
+                    .price(model.getPrice())
+                    .reserveStart(model.getReserveStart())
+                    .reserveEnd(model.getReserveEnd())
                     .build();
         }
 

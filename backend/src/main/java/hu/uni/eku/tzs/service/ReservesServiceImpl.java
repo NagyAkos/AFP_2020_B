@@ -26,7 +26,13 @@ public class ReservesServiceImpl implements ReservesService{
                                 &&
                                 r.isCampingStyle() == reserves.isCampingStyle()
                                 &&
-                                r.isElectricity() == reserves.isElectricity());
+                                r.isElectricity() == reserves.isElectricity()
+                                &&
+                                r.getPrice()==reserves.getPrice()
+                                &&
+                                r.getReserveStart()==reserves.getReserveStart()
+                                &&
+                                r.getReserveEnd()==reserves.getReserveEnd());
         if(isAlreadyRecorded){
             log.info("Reserve {} is already recorded!", reserves);
             throw new ReservesAlreadyExistsException(String.format("Reserve (%s) already exists!", reserves.toString()));

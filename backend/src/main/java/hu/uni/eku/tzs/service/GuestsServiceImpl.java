@@ -25,11 +25,9 @@ public class GuestsServiceImpl implements GuestsService {
                                 &&
                                 g.getGuestName() == guests.getGuestName()
                                 &&
-                                        g.getPaymentMethod() == guests.getPaymentMethod()
+                                        g.getEmail() == guests.getEmail()
                                 &&
-                                        g.getCampingId() == guests.getCampingId()
-                                &&
-                                        g.getReserveDate() == guests.getReserveDate());
+                                        g.getPhone() == guests.getPhone());
         if(isAlreadyRecorded){
             log.info("Complex Number {} is already recorded!", guests);
             throw new GuestsAlreadyExistsException(String.format("Complex Number (%s) already exists!", guests.toString()));

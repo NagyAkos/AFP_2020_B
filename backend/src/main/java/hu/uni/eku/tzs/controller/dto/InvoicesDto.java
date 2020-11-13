@@ -6,7 +6,8 @@ import lombok.Data;
 @Data
 @Builder
 public class InvoicesDto
-{
-    private int id;
-    private long balance;
+{   private int id;
+    private int questId;
+    private String paymentMethod;
+    private int reserveId;
 }

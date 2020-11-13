@@ -12,7 +12,6 @@ import java.time.LocalDate;
 public class Guests {
     private int id;
     private String guestName;
-    private String paymentMethod;
-    private int campingId;
-    private LocalDate reserveDate;
+    private String email;
+    private int phone;
 }

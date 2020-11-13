@@ -17,6 +17,9 @@ public class Invoices {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
     @Column
-    private long balance;
-
+    private int questId;
+    @Column
+    private String paymentMehtod;
+    @Column
+    private int reserveId;
 }
