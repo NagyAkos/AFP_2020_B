@@ -13,6 +13,7 @@ import java.time.LocalDate;
 public class Reserves {
     private int id;
     private int guestId;
+    private int campId;
     private boolean campingStyle;
     private boolean electricity;
     private int price;

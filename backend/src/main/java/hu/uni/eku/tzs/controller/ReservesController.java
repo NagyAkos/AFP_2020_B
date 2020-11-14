@@ -33,7 +33,7 @@ public class ReservesController {
     ){
         log.info("Reserve informations: ({},{},{},{})",request.getId(),request.getGuestId(),request.getPrice(),request.getReserveEnd(),request.getReserveStart());
         try {
-            service.record(new Reserves(request.getId(),request.getGuestId(),request.isCampingStyle(), request.isElectricity(),request.getPrice(),request.getReserveStart(),request.getReserveEnd()));
+            service.record(new Reserves(request.getId(),request.getGuestId(),request.getCampId(),request.isCampingStyle(), request.isElectricity(),request.getPrice(),request.getReserveStart(),request.getReserveEnd()));
         } catch (Exception e) {
             log.info("Reserve is already exists! Message: {},{},{},{}", request.getGuestId(),request.getReserveEnd(),request.getReserveStart(), e.getMessage());
             throw new ResponseStatusException(
@@ -55,7 +55,8 @@ public class ReservesController {
                         .electricity(model.isElectricity())
                         .price(model.getPrice())
                         .reserveStart(model.getReserveStart())
-                        .reserveEnd(model.getReserveEnd())
+                        .reserveEnd(model.getReserveEnd()
+                        )
                         .build()
         ).collect(Collectors.toList());
     }

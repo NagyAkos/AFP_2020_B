@@ -29,14 +29,14 @@ public class ReservesServiceImplTest {
 
     @Test
     void record() throws ReservesAlreadyExistsException {
-        Reserves reserves = new Reserves(1,1,true,true,1111111, LocalDate.of(2020,01,01),LocalDate.of(2020,01,01));
+        Reserves reserves = new Reserves(1,1,1,true,true,1111111, LocalDate.of(2020,01,01),LocalDate.of(2020,01,01));
         service.record(reserves);
         verify(dao).create(any());
     }
 
     @Test
     void recordExistingGuests() {
-        Reserves reserves = new Reserves(1,1,true,true,1111111, LocalDate.of(2020,01,01),LocalDate.of(2020,01,01));
+        Reserves reserves = new Reserves(1,1,1,true,true,1111111, LocalDate.of(2020,01,01),LocalDate.of(2020,01,01));
         when(dao.readAll()).thenReturn(List.of(reserves));
         assertThrows(ReservesAlreadyExistsException.class, () -> service.record(reserves));
         verify(dao, never()).create(any());
@@ -45,8 +45,8 @@ public class ReservesServiceImplTest {
     @Test
     void readAll() {
         Collection<Reserves> daoResponse = List.of(
-                new Reserves(1,1,true,true,1111111, LocalDate.of(2020,01,01),LocalDate.of(2020,01,01)),
-                new Reserves(2,1,true,true,1111111, LocalDate.of(2020,01,01),LocalDate.of(2020,01,01))
+                new Reserves(1,1,1,true,true,1111111, LocalDate.of(2020,01,01),LocalDate.of(2020,01,01)),
+                new Reserves(2,12,2,true,true,1111111, LocalDate.of(2020,01,01),LocalDate.of(2020,01,01))
         );
         when(dao.readAll()).thenReturn(daoResponse);
 
