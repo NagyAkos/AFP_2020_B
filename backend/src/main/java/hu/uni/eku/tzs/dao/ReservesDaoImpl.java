@@ -41,6 +41,7 @@ public class ReservesDaoImpl implements ReservesDao{
             return new Reserves(
                     entity.getId(),
                     entity.getGuestId(),
+                    entity.getCampId(),
                     entity.isCampingStyle(),
                     entity.isElectricity(),
                     entity.getPrice(),
@@ -53,6 +54,7 @@ public class ReservesDaoImpl implements ReservesDao{
             return hu.uni.eku.tzs.dao.entity.Reserves.builder()
                     .id(model.getId())
                     .guestId(model.getGuestId())
+                    .campId(model.getCampId())
                     .campingStyle(model.isCampingStyle())
                     .electricity(model.isElectricity())
                     .price(model.getPrice())

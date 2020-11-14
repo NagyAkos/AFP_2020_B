@@ -24,6 +24,8 @@ public class ReservesServiceImpl implements ReservesService{
                                 &&
                                 r.getGuestId() == reserves.getGuestId()
                                 &&
+                                        r.getCampId()==reserves.getCampId()
+                                        &&
                                 r.isCampingStyle() == reserves.isCampingStyle()
                                 &&
                                 r.isElectricity() == reserves.isElectricity()

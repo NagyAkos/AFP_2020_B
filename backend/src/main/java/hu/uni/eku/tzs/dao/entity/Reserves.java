@@ -20,6 +20,8 @@ public class Reserves {
     @Column
     private int guestId;
     @Column
+    private int campId;
+    @Column
     private boolean campingStyle;
     @Column
     private boolean electricity;

@@ -16,6 +16,7 @@ import java.time.LocalDate;
 public class ReservesRecordRequestDto {
     private int id;
     private int guestId;
+    private int campId;
     private boolean campingStyle;
     private boolean electricity;
     private int price;
