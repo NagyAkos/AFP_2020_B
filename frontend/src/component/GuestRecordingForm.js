@@ -20,18 +20,59 @@ class GuestRecordingForm extends React.Component{
 
     render() {
         return(
-            <div>
+            <div className="insertForm mx-auto mt-5">
+                <h3 className="text-center">Vendég létrehozása</h3>
+                <div className="table-responsive">
                 <ErrorMessageWell/>
-                    <label htmlFor={"guestName"} >Név</label>
-                    <input type={"text"} id={"guestName"} name={"guestName"} value={this.state.guestName} onChange={this.formOnChange}/>
-                    <br/>
-                    <label htmlFor={"email"}>Email</label>
-                    <input type={"text"} id={"email"} name={"email"} value={this.state.email} onChange={this.formOnChange}/>
-                    <br/>
-                    <label htmlFor={"phone"}>Telefonszám</label>
-                    <input type={"number"} id={"phone"} name={"phone"} value={this.state.phone} onChange={this.formOnChange}/>
-                    <br/>
-                    <button onClick={()=> actions.recordGuest(this.state)}>Felvétel</button>
+                    <table className="table borderless">
+                        <tbody>
+                            <tr>
+                                <td>Név</td>
+                                <td><input 
+                                        type={"text"}
+                                        value={this.state.guestName}
+                                        onChange={(e)=>{
+                                            let st = this.state;
+                                            st.guestName = e.target.value;
+                                            this.setState(st);}}
+                                    /></td>
+                            </tr>
+                            <tr>
+                                <td>Email</td>
+                                <td><input type={"text"}
+                                            value={this.state.email}
+                                            onChange={(e)=>{
+                                                let st = this.state;
+                                                st.email = e.target.value;
+                                                this.setState(st);
+                                            }}           
+                                /></td>
+                            </tr>
+                            <tr>
+                                <td>Telefonszám</td>
+                                <td><input type={"number"}
+                                            value={this.state.phone}
+                                            onChange={(e)=>{
+                                                let st = this.state;
+                                                st.phone = e.target.value;
+                                                this.setState(st);
+                                            }}           
+                                /></td>
+                            </tr>
+                            
+                            <tr>
+                                <td 
+                                colSpan={2}>
+                                    <button
+                                        className="btn btn-info"
+                                        onClick={()=>{actions.recordGuest(this.state)}}
+                                        >Létrehoz
+                                    </button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
         );
     }
