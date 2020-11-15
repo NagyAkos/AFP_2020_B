@@ -1,20 +1,25 @@
 import React from 'react';
 import './App.scss';
+
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'jquery/dist/jquery.min.js';
+import 'bootstrap/dist/js/bootstrap.min.js';
+
+import {BrowserRouter, Switch, Route} from "react-router-dom";
 import GuestRecordingForm from "./component/GuestRecordingForm";
-import GuestList from "./component/GuestList";
+import Navbar from "./component/NavBar";
+import GuestList from './component/GuestList';
 
 function App() {
   return (
-    <div className={["App","container"]}>
-        <div className={"row"}>
-            <div className={"col-md-3"}></div>
-            <div className={"col-md-6"}>
-                <GuestRecordingForm/>
-                <GuestList/>
-            </div>
-            <div className={"col-md-3"}></div>
-        </div>
-    </div>
+     <BrowserRouter>
+         <Navbar/>
+         <Switch>
+              <Route path="/guests/record" component={GuestRecordingForm}/>
+              <Route path="/guests" component={GuestList}/>
+         </Switch>
+     </BrowserRouter>
+  
   );
 }
 

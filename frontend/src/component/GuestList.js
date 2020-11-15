@@ -28,12 +28,33 @@ class GuestList extends React.Component{
     render() {
         return(
             <div>
-                <button onClick={()=> actions.fetchGuests(this.state)}>Listáz</button>
-                {this.state.guests.map(({id,guestName,email,phone}, index)=>{
+                <button className="btn btn-info" onClick={()=> actions.fetchGuests(this.state)}>Listáz</button>
+                <div div className="table-responsive">
+                    <table className="product_table table">
+                        <thead>
+                            <tr>
+                                <td>Id </td>
+                                <td>Név </td>
+                                <td>Email </td>
+                                <td>Telefonszám </td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        {this.state.guests.map(({id,guestName,email,phone})=>{
                     return(
-                        <GuestListItem key={index} id={id} guestName={guestName} email={email} phone={phone}/>
-                );
-                })}
+                        <tr key={id}>
+                            <td>{id}</td>
+                            <td>{guestName}</td>
+                            <td>{email}</td>
+                            <td>{phone}</td>
+                            
+                        </tr>
+                            );
+                        })}
+                        </tbody>
+                    </table>
+                </div>
+                
             </div>
         );
     }
