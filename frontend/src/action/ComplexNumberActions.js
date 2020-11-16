@@ -20,7 +20,6 @@ export const recordComplexNumber = ({real,imag}) =>{
             fetchComplexNumbers();
         });
 }
-
 export const fetchComplexNumbers = () =>{
 
     axios.get('/complex-number/').then((resp)=>{
