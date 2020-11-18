@@ -2,24 +2,25 @@ import axios from 'axios';
 import dispatcher from '../dispatcher/Dispatcher';
 import * as actionConstants from '../dispatcher/ReservationActionConstants'
 
-export const recordReservation = ({campId, campingstyle, electricity, guestId, price, reserveEnd, reserveStart}) => {
+export const recordReserve = ({guestId,campId,campingStyle,electricity,price,reserveStart,reserveEnd}) =>{
     axios.post('/reserves/record',
         {
-            campId : campId,
-            campingstyle : campingstyle,
-            electricity : electricity,
             guestId : guestId,
+            campId: campId,
+            campingStyle : campingStyle,
+            electricity :electricity,
             price : price,
-            reserveEnd :reserveEnd,
-            reserveStart : reserveStart
+            reserveStart : reserveStart,
+            reserveEnd : reserveEnd
         });
+
 }
 export const fetchReserves = () =>{
 
     axios.get('/reserves/').then((resp)=>{
         dispatcher.dispatch({
-            action : actionConstants.referesh,
-            payload : resp.data
+            action : actionConstants.refresh,
+            payload: resp.data
         });
     })
 }

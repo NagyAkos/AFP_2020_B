@@ -10,22 +10,22 @@ import GuestRecordingForm from "./component/GuestRecordingForm";
 import Navbar from "./component/NavBar";
 import GuestList from './component/GuestList';
 
-import ReservationRecordingForm from "./component/ReservationRecordinForm";
-import ReservationList from "./component/ReservationList";
+import ReservesList from "./component/ReservationList";
+import ReservesRecordForm from "./component/ReservationRecordingForm";
 
 function App() {
-  return (
-     <BrowserRouter>
-         <Navbar/>
-         <Switch>
-              <Route path="/guests/record" component={GuestRecordingForm}/>
-              <Route path="/guests" component={GuestList}/>
-              <Route path="/reservations/record" component={ReservationRecordingForm}/>
-              <Route peth="/reservations" component={ReservationList}/>
-         </Switch>
-     </BrowserRouter>
-  
-  );
+    return (
+        <BrowserRouter>
+            <Navbar/>
+            <Switch>
+                <Route path="/reserves/record" component={ReservesRecordForm}/>
+                <Route path="/guests/record" component={GuestRecordingForm}/>
+                <Route path="/guests" component={GuestList}/>
+                <Route peth="/reserves" component={ReservesList}/>
+            </Switch>
+        </BrowserRouter>
+
+    );
 }
 
 export default App;

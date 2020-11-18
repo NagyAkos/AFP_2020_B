@@ -1,5 +1,5 @@
 module.exports = {
-    refresh : 'REFRESH_RESERVATIONS',
-    showError : 'SHOW_RESERVATIONS_ERROR_MSG',
-    clearError : 'CLEAR_RESERVATIONS_ERROR_MSG'
+    refresh : 'REFRESH_RESERVES',
+    showError : 'SHOW_RESERVES_ERROR_MSG',
+    clearError : 'CLEAR_RESERVES_ERROR_MSG'
 }
