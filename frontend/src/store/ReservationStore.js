@@ -19,7 +19,7 @@ class ReservationStore extends EventEmitter{
     }
 }
 
-const store = new ReservesStore();
+const store = new ReservationStore();
 export default store;
 
 dispatcher.register(({action,payload})=>{
