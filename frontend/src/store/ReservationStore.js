@@ -4,7 +4,7 @@ import {refresh} from '../dispatcher/ReservationActionConstants';
 
 class ReservationStore extends EventEmitter{
 
-    _reservations = [];
+    _reserves = [];
 
     emitChange(){
         this.emit('Change');
@@ -24,6 +24,6 @@ export default store;
 
 dispatcher.register(({action,payload})=>{
     if(action !== refresh ) return;
-    store._reservations = payload;
+    store._reserves = payload;
     store.emitChange();
 })
