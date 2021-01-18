@@ -12,3 +12,4 @@
 |9.|Szabó Gergely| adatbázis-kapcsolat| adatbázisba való felvitel|Sikeres
 |10.|Nagy Ákos|Foglalás| a foglalás funkció tesztelése, adatok kitöltése| Sikeres
 |11.| Ligárt Ádám| Lekérdezés| férőhelyek lekérdezése és megjelenítése| Sikeres
+|12.|Karaba Márk| Főoldal| A főoldalon való navigálás tesztelése| Sikeres
