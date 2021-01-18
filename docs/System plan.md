@@ -74,7 +74,14 @@ A rendszerhez szükség van egy adatbázis szerverre, ebben az esetben MySql-t h
 ## 08. Adatbázisterv
 A kemping szolgáltatáshoz készült az adatbázis, ennek a tervét mutatja a mellékelt ábra.  
 ![Adatbázisterv a foglalásokhoz](https://github.com/NagyAkos/AFP_2020_B/blob/master/docs/database_model.png)
-
+**A camps tábla:**  
+A kemping id-jét tartalmazza.
+**Az invoices tábla:**  
+Ebben a táblában található a vendég id-je, a vendég kívánt fizetési módja és a foglalása id-je.
+**A reserves tábla:**  
+Ez a tábla a foglalásokat tartalmazza, hogy a kemping stílusát, árát és hogy extra szolgáltatást tartalmaz-e a foglalás(áram). Ide tartozik még a foglalás kezdetének az időpontja és a foglalás lejáratának időpontja.
+**A guests tábla:**  
+A guests tábla tartalmazza a vendégeket és a hozzájuk tartozó személyes adatokat. A vendég neve, email címe és a telefonszáma kerül tárolásra adatbázisunkban.
 
 ## 09. Implementációs terv
 
