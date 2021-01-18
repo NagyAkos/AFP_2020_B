@@ -73,7 +73,7 @@ A rendszerhez szükség van egy adatbázis szerverre, ebben az esetben MySql-t h
 
 ## 08. Adatbázisterv
 A kemping szolgáltatáshoz készült az adatbázis, ennek a tervét mutatja a mellékelt ábra.  
-![Adatbázisterv a foglalásokhoz](docs/database_model.png)
+![Adatbázisterv a foglalásokhoz](https://github.com/NagyAkos/AFP_2020_B/blob/master/docs/database_model.png)
 
 
 ## 09. Implementációs terv
