@@ -70,3 +70,5 @@ Fejlesztoi eszkozok:
 
 ## 07. Architekturális terv
 A rendszerhez szükség van egy adatbázis szerverre, ebben az esetben MySql-t használunk. A kliens oldali programokat egy php alapú REST api szolgálja ki, ez csatlakozik az adatbázis szerverhez. A kliensekkel JSON objektumokkal kommunikál.	
+
+## 08. Adatbázisterv
