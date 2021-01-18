@@ -8,3 +8,4 @@
 |5.|Szabó Gergely|funkciók|funkciók újbóli ellenőrzése a meglévő frontend elemekkel együtt, hibakezelés tesztelése.|Sikeres|
 |6.|Karaba Márk| Szállás foglaló| Tesztelés Swaggeren keresztül|Sikeres
 |7.|Ligárt Ádám|adatbázis-kapcsolat|CRUD műveletek tesztelése| Sikeres
+|8.|Nagy Ákos|Frontend elemek bővítése|Sikeres
