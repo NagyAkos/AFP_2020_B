@@ -14,3 +14,4 @@
 |11.| Ligárt Ádám| Lekérdezés| férőhelyek lekérdezése és megjelenítése| Sikeres
 |12.|Karaba Márk| Főoldal| A főoldalon való navigálás tesztelése| Sikeres
 |13.|Nagy Ákos| Férőhelyek lekérdezése| adatok kitöltése, majd megjelenítése| Sikeres 
+|14.|Karaba Márk| Hatékonyság teszt| A program hatékonyságának tesztelése| Sikeres
