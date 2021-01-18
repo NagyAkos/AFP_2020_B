@@ -81,3 +81,8 @@ Web: A webes felület HTML, PHP, CSS valamis Javascript nyelven készül. Minél
 ## 10. Tesztterv
 
 A tesztelések célja a rendszer és összetevői működőképességének vizsgálata, és leellenőrzése. TESZTELÉSI ELJÁRÁSOK: Unit teszt: Már a kódolási szakasz alatt a szintaktikai/szemantikai hibák kiaknázása, a kód metódusai akkor vannak kész, ha az ezekre készített Unit tesztekre hibamentesen lefutnak. Alfa teszt: A kész projekt tesztelése minden elérhető felületen, platformon, azok verziószámain, hibákat keresve, szélsőséges eseteket szimulálva, az esetleges hibák megtalálása érdekében. A tesztet a fejlesztők végzik, ideálisan mindenki a saját beosztott projektrészének megfelelően. Beta teszt: A weboldal kiadása után publikált állapotában már nem a fejlesztők végzik, a kiadott platformok összes verzióján hibamentesen kell működnie a terméknek ennek a tesztelési fázis befejeztével. A tesztelők visszajelzéseket küldhetnek a fejlesztőknek, ezzel kisegítve őket. Minden backend szolgáltatásnak, bejelentkezési, rendelési, értékelési felületnek hibamentesen kell működnie minden platformon. Esetleges hibák során a felhasználót lekezelt kivételekkel kell tájékoztatni.
+
+
+## 11. Telepítési terv
+
+A MySQL adatbázis létrehozásához egy külső adatbázis szolgáltató, a Heroku ingyenes szolgáltatását vesszük igénybe. Ez limitált számú kapcsolatot és csak 10 MB tárhelyet biztosít, de a múzeum méretének megfelelnek. Később, ha bővülnek a szolgáltatásaink, szükséges lesz befektetni nagyobb tárhelyért és korlátlan kapcsolatért egy másik csomagba.
