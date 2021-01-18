@@ -9,3 +9,4 @@
 |6.|Karaba Márk| Szállás foglaló| Tesztelés Swaggeren keresztül|Sikeres
 |7.|Ligárt Ádám|adatbázis-kapcsolat|CRUD műveletek tesztelése| Sikeres
 |8.|Nagy Ákos|Frontend elemek| Frontend elemek bővítése|Sikeres
+|9.|Szabó Gergely| adatbázis-kapcsolat| adatbázisba való felvitel|Sikeres
