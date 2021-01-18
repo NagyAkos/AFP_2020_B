@@ -72,6 +72,8 @@ Fejlesztoi eszkozok:
 A rendszerhez szükség van egy adatbázis szerverre, ebben az esetben MySql-t használunk. A kliens oldali programokat egy php alapú REST api szolgálja ki, ez csatlakozik az adatbázis szerverhez. A kliensekkel JSON objektumokkal kommunikál.	
 
 ## 08. Adatbázisterv
+A kemping szolgáltatáshoz készült az adatbázis, ennek a tervét mutatja a mellékelt ábra.  
+![Adatbázisterv a foglalásokhoz](docs/database_model.png)
 
 
 ## 09. Implementációs terv
