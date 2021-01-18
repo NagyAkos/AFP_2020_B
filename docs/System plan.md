@@ -95,3 +95,10 @@ A MySQL adatbázis létrehozásához egy külső adatbázis szolgáltató, a Her
 **Az oldal felépítésével kapcsolatos módosítások:**
 - A portál bővülésével a menüstruktúrát át kell majd alakítani: több kategóriába kell majd rendezni a tartalmakat, és a főkategóriákat minél több almenüpotba kell majd sorolni a hatékonyabb böngészhetőség érdekében.
 - Ha a portált már elég sokan látogatják, érdemes hirdetéseket megjeleníteni: először csak a kezdőoldal jobb oldalsó sávjában, később minden aloldalon ugyanitt, egységesen. Azonban soha nem felugró ablakokban vagy a tartalmi részben elhelyezve, hogy ne zavarja a látogatókat a sok reklám. 
+**Új funkciók bevezetése:**
+- Százas nagyságrendű aloldalszám esetén mindenképpen érdemes bevezetni kulcsszavas keresési lehetőséget a portálon.
+- Nemcsak külön-külön az aloldalakon, hanem a portálra globálisan nézve is be kell vezetni egy regisztrációs lehetőséget további funkciók megvalósításához, úgy mint:
+	- Kedvencek összeállítása: a leggyakrabban látogatott aloldalak elérése a saját fiókunkból egy helyen.
+	- Hírlevél küldése a felhasználóknak a portállal kapcsolatban
+	- Aloldalak értékelése, vélemény írása
+- Mobilalkalmazás formájában is elérhetővé kell tenni a portál legkeresettebb szolgáltatásait Andoid és iOS platformon.
